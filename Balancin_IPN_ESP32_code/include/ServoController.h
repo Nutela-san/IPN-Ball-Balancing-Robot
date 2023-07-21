@@ -33,11 +33,14 @@ public:
     periodo = 1000.0/((float)pwm_freq);
     pwm_range[0] = map_f(1.0,0.0,periodo,0.0,max_pwm_value);
     pwm_range[1] = map_f(2.0,0.0,periodo,0.0,max_pwm_value);
+    move_range[0] = 0;
+    move_range[1] = 180;
+
 
     pinMode(pwm_pin,OUTPUT);
     ledcSetup(id_pwm_chanel,pwm_freq,pwm_bit_resolution);
     ledcAttachPin(pwm_pin,id_pwm_chanel);
-    this->set_pos(0);
+    init_pos = 90;
   }
 
   void begin(unsigned int pwm_valor_min, unsigned int pwm_valor_max, uint8_t rango_movimiento_min, uint8_t rango_movimiento_max, uint8_t pos_inicial, bool invertir){
