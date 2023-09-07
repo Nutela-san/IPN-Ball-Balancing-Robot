@@ -157,6 +157,7 @@ tabs.add(serial_tab, text='Configuracion Serial')
 tabs.add(pad,text='PAD para control Inclinacón')
 
 tabs.pack(expand=True)
+
 def evento_follow_pos(event):
   x_incli = map(event.x,0,screen_w,-15,15)
   y_incli = map(event.y,0,screen_h,15,-15)
