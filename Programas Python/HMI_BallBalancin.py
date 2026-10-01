@@ -327,7 +327,7 @@ class CameraCalibration(ttk.Frame):
       self.CS_frame, values = self.camera_info.available_cameras,
       state = 'readonly', justify='center', font= 'Arial 12 bold'
     )
-    self.camera_selector.set(self.camera_info.available_cameras[0])
+    #self.camera_selector.set(self.camera_info.available_cameras[0])
     self.btn_toggle_video = tk.Button(
       self.CS_frame, text = "Conect to webcam", command = self.toggle_video,
       fg = 'white', background = '#9fd9b3', font = 'Arial 12 bold'

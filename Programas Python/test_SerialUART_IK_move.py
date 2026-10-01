@@ -6,8 +6,8 @@ from serial.tools import list_ports
 window = tk.Tk() # crea la ventana apartir de un metodo de tk
 window.title('Control de Inclinación con Mouse') #titulo de la ventana
 
-screen_w = 1000#int(window.winfo_screenwidth()*0.98) # Informacion de la pantalla
-screen_h = 750#int(window.winfo_screenheight()*0.9)
+screen_w = 640#int(window.winfo_screenwidth()*0.98) # Informacion de la pantalla
+screen_h = 480#int(window.winfo_screenheight()*0.9)
 window.geometry(f'{screen_w}x{screen_h}+200+0') #ajustado para una pantalla FULL HD
 window.resizable(False, False)
 
